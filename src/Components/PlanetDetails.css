@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.planet-details-wrapper {
+  background-image: url("../assets/stars.jpg");
+  background-size: contain;
+  padding: 1rem;
+}
+
+.details-planet-image-container {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-animation: fadeInFromTop 1.5s forwards ease-in-out;
+  animation: fadeInFromTop 1.5s forwards ease-in-out;
+}
+
+.details-planet-image {
+  width: 70%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: rotatePlanet 120s linear infinite;
+  animation: rotatePlanet 120s linear infinite;
+}
+
+@-webkit-keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+.planet-details {
+  font-family: "Lato", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  -webkit-animation: fadeInFromBottom 1.5s forwards ease-in-out;
+  animation: fadeInFromBottom 1.5s forwards ease-in-out;
+}
+
+.planet-name {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 10px;
+}
+
+.planet-primary-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.details-population-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.details-climate-terrain-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 25px;
+  -webkit-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.details-climate-wrapper,
+.details-terrain-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+}
+
+.details-population-wrapper div {
+  font-size: 1.5rem;
+}
+
+.details-population-wrapper div:nth-child(1),
+.details-climate-wrapper div:nth-child(2),
+.details-terrain-wrapper div:nth-child(2) {
+  color: white;
+}
+
+.details-population-wrapper div:nth-child(2),
+.details-climate-wrapper div:nth-child(1),
+.details-terrain-wrapper div:nth-child(1) {
+  color: #fbeb04;
+}
+
+.planet-resident-details {
+  padding: 2rem 0;
+}
+
+.planet-resident-list {
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 25px;
+  /* column-gap: 5px; */
+}
+@-webkit-keyframes rotatePlanet {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes rotatePlanet {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+
+.planet-resident-list {
+  overflow: auto;
+}
+
+.inactive {
+  display: none;
+}
+
+.planet-details-wrapper.active {
+  display: block;
+  opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .planet-details-wrapper.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+  }
+  .planet-details-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    position: relative;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    height: 100vh;
+  }
+
+  .planet-details {
+    margin: 1rem 3rem;
+    width: 70%;
+    opacity: 0;
+    -webkit-animation: wait 1s forwards 1.5s ease;
+    animation: wait 1s forwards 1.5s ease;
+    overflow: auto;
+  }
+
+  @-webkit-keyframes wait {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes wait {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .details-planet-image-container {
+    width: 80%;
+    overflow: hidden;
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
+    -webkit-transform: translate(50%, 0%);
+    -ms-transform: translate(50%, 0%);
+    transform: translate(50%, 0%);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10%;
+    -webkit-animation: movefromcenter 1.5s forwards 0.5s ease-in-out;
+    animation: movefromcenter 1.5s forwards 0.5s ease-in-out;
+  }
+
+  .details-planet-image {
+    width: 100%;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: rotatePlanet 120s linear infinite;
+    animation: rotatePlanet 120s linear infinite;
+  }
+
+  @-webkit-keyframes movefromcenter {
+    0% {
+      -webkit-transform: translate(50%, 0%);
+      transform: translate(50%, 0%);
+    }
+    100% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes movefromcenter {
+    0% {
+      -webkit-transform: translate(50%, 0%);
+      transform: translate(50%, 0%);
+    }
+    100% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  }
+
+  @-webkit-keyframes rotatePlanet {
+    0% {
+      -webkit-transform: rotateZ(0);
+      transform: rotateZ(0);
+    }
+    100% {
+      -webkit-transform: rotateZ(360deg);
+      transform: rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotatePlanet {
+    0% {
+      -webkit-transform: rotateZ(0);
+      transform: rotateZ(0);
+    }
+    100% {
+      -webkit-transform: rotateZ(360deg);
+      transform: rotateZ(360deg);
+    }
+  }
+
+  .planet-resident-list {
+    overflow: auto;
+    height: 200px;
+  }
+
+  .planet-resident-list::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .planet-resident-list::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  .planet-resident-list::-webkit-scrollbar-track {
+    background: black;
+    width: 10px;
+    border: 1px solid #fbeb04;
+    border-radius: 16px;
+  }
+
+  .planet-resident-list::-webkit-scrollbar-thumb {
+    margin: 1px;
+    width: 5px;
+    background: #fbeb04;
+    border-radius: 16px;
+  }
+}

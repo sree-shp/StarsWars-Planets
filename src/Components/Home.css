@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.home {
+  background-image: url("../assets/stars.jpg");
+  background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-center: center;
+  color: white;
+  text-align: center;
+  padding: 3rem 0rem;
+  -webkit-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.planets-card-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.planets-card-wrapper a {
+  text-decoration: none;
+  color: white;
+}
+
+.planets-card-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+.planets-card-wrapper::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.planet-card-wrapper ul {
+  margin: 0;
+  padding: 0;
+}
+
+.home-heading {
+  font-family: "Star Wars";
+  color: #fbeb04;
+  font-size: 3rem;
+  padding: 3rem 1rem 0;
+}
+
+.home h3 {
+  font-family: "Star Wars";
+  color: white;
+  font-size: 2rem;
+  padding: 0rem 1rem;
+}
+
+.btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.previous-btn,
+.next-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+  padding: 1rem 2rem;
+  border: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.home.active {
+  display: block;
+  opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .planets-card-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0 4rem;
+  }
+}
